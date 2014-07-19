@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="javascripts/scale.fix.js"></script>
+    <script src="javascripts/imagesloaded.pkgd.min.js"></script>
     <script src="javascripts/masonry.pkgd.min.js"></script>
     <script src="javascripts/lightGallery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -145,8 +146,11 @@
         auto:     true,
       });
 
-      $("#container-masonry").masonry({
-        "itemSelector": ".item"
+      var $container = $('#container-masonry');
+      $container.imagesLoaded( function() {
+        $container.masonry({
+          "itemSelector": ".item"
+        });
       });
     });
   </script>
