@@ -6,9 +6,12 @@
     <title>Himalaya Traders</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/lightGallery.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="javascripts/scale.fix.js"></script>
     <script src="javascripts/masonry.pkgd.min.js"></script>
+    <script src="javascripts/lightGallery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!--[if lt IE 9]>
@@ -29,18 +32,42 @@
         </ul>
       </header>
       <section>
-        <div class="js-masonry" data-masonry-options='{ "itemSelector": ".item" }'>
-          <div class="item" data-title="title" data-description="desc" data="src"><img src="images/ktr/rotex-gs.jpg"></div>
-          <div class="item" data-title="title" data-description="desc" data="src"><img src="images/ktr/radex.jpg"></div>
-          <div class="item" data-title="title" data-description="desc" data="src"><img src="images/ktr/bowex.jpg"></div>
-          <div class="item" data-title="title" data-description="desc" data="src"><img src="images/ktr/ktr-all.png"></div>
-          <div class="item" data-title="title" data-description="desc" data="src"><img src="images/gudel/rack-and-pinions.jpg"></div>
-          <div class="item" data-title="title" data-description="desc" data="src"><img src="images/alwayse/alwayse-teaser.jpg"></div>
-          <div class="item" data-title="title" data-description="desc" data="src"><img src="images/gudel/tmf.jpg"></div>
-          <div class="item" data-title="title" data-description="desc" data="src"><img src="images/hitachi/saw.jpg"></div>
-          <div class="item" data-title="title" data-description="desc" data="src"><img src="images/gudel/gudel-all.jpg"></div>
-          <div class="item" data-title="title" data-description="desc" data="src"><img src="images/gudel/sommer-gripper.jpg"></div>
-          <div class="item" data-title="title" data-description="desc" data="src"><img src="images/hitachi/hammer.png"></div>
+        <div id="container" class="js-masonry" data-masonry-options='{ "itemSelector": ".item" }'>
+          <ul id="lightGallery">
+            <li class="item" data-title="ROTEX® GS" data-desc="ROTEX® GS is a three-part, axial plug-in coupling backlash-free under pre-stress" data-src="images/ktr/rotex-gs.jpg">
+              <a href="#"><img src="images/ktr/rotex-gs.jpg"></a>
+            </li>
+            <li class="item" data-title="RADEX®-N" data-desc="RADEX®-N is a backlash-free, torsionally rigid and maintenance-free all-steel coupling" data-src="images/ktr/radex.jpg">
+              <a href="#"><img src="images/ktr/radex.jpg"></a>
+            </li>
+            <li class="item" data-title="BoWex®" data-desc="BoWex® Curved-tooth gear couplings® are flexible shaft connections for a positive torque transmission<br/>and specifically suitable to compensate for axial, radial and angular shaft misalignment" data-src="images/ktr/bowex.jpg">
+              <a href="#"><img src="images/ktr/bowex.jpg"></a>
+            </li>
+            <li class="item" data-title="KTR complete range of couplings" data-desc="We are authorised distributors of KTR Couplings India" data-src="images/ktr/ktr-all.png">
+              <a href="#"><img src="images/ktr/ktr-all.png"></a>
+            </li>
+            <li class="item" data-title="GÜDEL Racks and pinions" data-desc="GÜDEL racks and pinions are available in various designs and qualities, but we can also produce custom-made models on request" data-src="images/gudel/rack-and-pinions.jpg">
+              <a href="#"><img src="images/gudel/rack-and-pinions.jpg"></a>
+            </li>
+            <li class="item" data-title="Alwayse ball transfer units" data-desc="Alwayse ball units are a multi-directional, material handling system, manufactured from high quality materials" data-src="images/alwayse/alwayse-teaser.jpg">
+              <a href="#"><img src="images/alwayse/alwayse-teaser.jpg"></a>
+            </li>
+            <li class="item" data-title="GÜDEL Trackmotion: Type TMF" data-desc="Modular linear axes with rack and pinion drive for use in diverse applications such as welding machines, plasma-arc cutting, mechanical processing, pouring, packing etc" data-src="images/gudel/tmf.jpg">
+              <a href="#"><img src="images/gudel/tmf.jpg"></a>
+            </li>
+            <li class="item" data-title="Hitachi Circular Saw" data-desc="HITACHI KOKI INDIA caters to a wide spectrum of power tool requirements in the Indian industry" data-src="images/hitachi/saw.jpg">
+              <a href="#"><img src="images/hitachi/saw.jpg"></a>
+            </li>
+            <li class="item" data-title="GÜDEL Racks and pinions" data-desc="We are authorised distributors of GÜDEL" data-src="images/gudel/gudel-all.jpg">
+              <a href="#"><img src="images/gudel/gudel-all.jpg"></a>
+            </li>
+            <li class="item" data-title="SOMMER AUTOMATIC Grippers" data-desc="2-Jaw Parallel Grippers" data-src="images/gudel/sommer-gripper.jpg">
+              <a href="#"><img src="images/gudel/sommer-gripper.jpg"></a>
+            </li>
+            <li class="item" data-title="Hitachi Demolition Hammer" data-desc="HITACHI KOKI INDIA caters to a wide spectrum of power tool requirements in the Indian industry" data-src="images/hitachi/hammer.png">
+              <a href="#"><img src="images/hitachi/hammer.png"></a>
+            </li>
+          </ul>
         </div>
         <p>
           Himalaya Traders are revered suppliers of mechanical power transmission components. We are authorised distributors for:
@@ -110,4 +137,13 @@
     </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
   </body>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#lightGallery").lightGallery({
+        caption:  true,
+        desc:     true,
+        auto:     true,
+      });
+    });
+  </script>
 </html>
