@@ -246,7 +246,7 @@ div.well h3 {
   color: #ACACAC;
 }
 
-.js-masonry {
+#container-masonry {
   margin-bottom: 25px;
 }
 
@@ -256,7 +256,7 @@ div.well h3 {
 
 #lightGallery .item {
   width: 32%;
-  margin: 4px;
+  margin: 3px;
 }
 
 li pre {

@@ -21,7 +21,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Himalaya Traders</h1>
+        <a href="http://www.himalayatraders.in"><h1>Himalaya Traders</h1></a>
         <p>Experts in mechanical power transmission components</p>
         <ul>
           <li class="single">
@@ -32,7 +32,7 @@
         </ul>
       </header>
       <section>
-        <div id="container" class="js-masonry" data-masonry-options='{ "itemSelector": ".item" }'>
+        <div id="container-masonry">
           <ul id="lightGallery">
             <li class="item" data-title="ROTEX® GS" data-desc="ROTEX® GS is a three-part, axial plug-in coupling backlash-free under pre-stress" data-src="images/ktr/rotex-gs.jpg">
               <a href="#"><img src="images/ktr/rotex-gs.jpg"></a>
@@ -143,6 +143,10 @@
         caption:  true,
         desc:     true,
         auto:     true,
+      });
+
+      $("#container-masonry").masonry({
+        "itemSelector": ".item"
       });
     });
   </script>
